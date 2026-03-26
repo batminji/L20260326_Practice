@@ -2,6 +2,12 @@
 #include "World.h"
 #include "Actor.h"
 
+#include "Player.h"
+#include "Monster.h"
+#include "Wall.h"
+#include "Floor.h"
+#include "Goal.h"
+
 UWorld::UWorld()
 {
 
@@ -44,6 +50,25 @@ void UWorld::Load(std::string MapName)
 		for (int X = 0; X < Line.length(); ++X)
 		{
 			char Tile = Line[X];
+			SpawnActor<AFloor>()->SetActorLocation({X, Y});
+			
+			switch (Tile)
+			{
+			case 'P':
+				SpawnActor<APlayer>()->SetActorLocation({ X, Y });
+				break;
+			case '#':
+				SpawnActor<AWall>()->SetActorLocation({ X, Y });
+				break;
+			case 'M':
+				SpawnActor<AMonster>()->SetActorLocation({ X, Y });
+				break;
+			case 'G':
+				SpawnActor<AGoal>()->SetActorLocation({ X, Y });
+				break;
+			default:
+				break;
+			}
 		}
 		Y++;
 	}

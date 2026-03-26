@@ -23,6 +23,11 @@ public:
 	void Terminate();
 	void Run();
 
+	inline UWorld* GetWorld()
+	{
+		return World;
+	}
+
 protected:
 	void Input();
 	void Tick();
@@ -35,3 +40,4 @@ protected:
 	static int KeyCode;
 };
 
+#define GEngine		UEngine::GetInstance()

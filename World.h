@@ -18,7 +18,7 @@ public:
 	template <typename ClassName>
 	AActor* SpawnActor()
 	{
-		AActor* NewActor = new ClassName*;
+		AActor* NewActor = new ClassName();
 		Actors.emplace_back(NewActor);
 		return NewActor;
 	}

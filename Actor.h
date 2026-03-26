@@ -16,6 +16,8 @@ public:
 	virtual void Tick();
 	virtual void Render();
 
+	void SetActorLocation(FVector2D NewLocation);
+
 protected:
 	FVector2D Location;
 	char Mesh;
