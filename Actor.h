@@ -17,6 +17,7 @@ public:
 	virtual void Render();
 
 	void SetActorLocation(FVector2D NewLocation);
+	void AddActorLocalOffset(FVector2D Offset);
 
 protected:
 	FVector2D Location;

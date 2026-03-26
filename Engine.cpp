@@ -39,7 +39,7 @@ void UEngine::Run()
 
 void UEngine::Input()
 {
-	// KeyCode = _getch();
+	KeyCode = _getch();
 }
 
 void UEngine::Tick()
