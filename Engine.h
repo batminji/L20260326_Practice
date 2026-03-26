@@ -31,5 +31,7 @@ protected:
 	int bIsRunning;
 
 	UWorld* World;
+
+	static int KeyCode;
 };
 

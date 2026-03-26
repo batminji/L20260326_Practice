@@ -1,7 +1,9 @@
+#include "stdafx.h"
 #include "Engine.h"
 #include "World.h"
 
 UEngine* UEngine::Instance = nullptr;
+int UEngine::KeyCode = 0;
 
 UEngine::UEngine()
 {
@@ -37,6 +39,7 @@ void UEngine::Run()
 
 void UEngine::Input()
 {
+	// KeyCode = _getch();
 }
 
 void UEngine::Tick()
